@@ -2,7 +2,7 @@
   "name": "edonec-react-native-template",
   "version": "0.0.1",
   "description": "eDonec React Native Boilerplate",
-  "repository": "git@gitlab.com:eDonec/edonec-rn-template.git",
+  "repository": "https://github.com/eDonec/react-native-template",
   "author": "Alaa Chakroun <chakrounalaaeddine@gmail.com>",
   "license": "MIT"
 }
