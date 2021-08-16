@@ -4,6 +4,7 @@ import { AxiosRequestConfig } from 'axios';
 import { errorHandler } from 'helpers/errorHandler';
 import { IUser, IUserToken, Token } from 'models/Token';
 import EncryptedStorage from 'react-native-encrypted-storage';
+import RNBootSplash from 'react-native-bootsplash';
 
 export const refreshUserToken = async () => {
   const token = await EncryptedStorage.getItem('userToken');
@@ -20,11 +21,19 @@ export const refreshUserToken = async () => {
   resetAuthToken(refreshTokenResponse.data);
 };
 
-export const onAppBoot = createAsyncThunk('auth/onAppBoot', async () => {
-  await refreshUserToken();
-  const response = await api.get<IUser>('/users/by-token');
+export const onAppBoot = createAsyncThunk('auth/onAppBoot', async (_, { rejectWithValue }) => {
+  try {
+    await refreshUserToken();
+    const response = await api.get<IUser>('/users/by-token');
 
-  return response.data;
+    RNBootSplash.hide({ fade: true });
+
+    return response.data;
+  } catch (error) {
+    RNBootSplash.hide({ fade: true });
+
+    return rejectWithValue(error.message);
+  }
 });
 
 export const signOut = createAsyncThunk('auth/signOut', async (_, { rejectWithValue }) => {
