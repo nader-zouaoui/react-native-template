@@ -1,0 +1,135 @@
+{
+  "root": true,
+  "extends": ["@react-native-community"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prefer-arrow", "react-hooks"],
+  "globals": {
+    "JSX": true
+  },
+  "rules": {
+    "prefer-arrow/prefer-arrow-functions": [
+      "warn",
+      {
+        "disallowPrototype": true,
+        "singleReturnOnly": false,
+        "classPropertiesAllowed": false
+      }
+    ],
+    "no-empty-function": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "prettier/prettier": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/prop-types": "off",
+    "no-extra-parens": "off",
+    "no-return-await": "off",
+    "no-await-in-loop": "off",
+    "no-plusplus": "off",
+    "no-underscore-dangle": "off",
+    "space-before-function-paren": "off",
+    "prefer-arrow-callback": ["error", { "allowNamedFunctions": false }],
+    "prefer-const": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "camelcase": "off",
+    "prefer-destructuring": [
+      "error",
+      {
+        "VariableDeclarator": {
+          "array": false,
+          "object": true
+        },
+        "AssignmentExpression": {
+          "array": true,
+          "object": true
+        }
+      },
+      {
+        "enforceForRenamedProperties": false
+      }
+    ],
+    "import/extensions": "off",
+    "no-case-declarations": "warn",
+    "import/no-anonymous-default-export": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "react/jsx-indent": "off",
+    "@typescript-eslint/no-use-before-define": ["off"],
+    "no-console": "warn",
+    "react/jsx-filename-extension": "off",
+    "no-const-assign": "error",
+    "no-var": "error",
+    "no-param-reassign": "off",
+    "no-unused-expressions": "off",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "{}": {
+            "message": "Use object instead",
+            "fixWith": "object"
+          },
+          "any": {
+            "message": "any is not allowed"
+          }
+        }
+      }
+    ],
+    "max-len": ["error", { "code": 155 }],
+    "react/prefer-stateless-function": "error",
+    "prefer-promise-reject-errors": ["off"],
+    "import/imports-first": 0,
+    "react/no-danger": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/newline-after-import": 0,
+    "no-unused-vars": "warn",
+    "import/no-webpack-loader-syntax": 0,
+    "import/prefer-default-export": 0,
+    "import/no-cycle": [0, { "maxDepth": 3 }],
+    "react/jsx-wrap-multilines": ["warn", { "declaration": false, "assignment": false }],
+    "react/no-typos": "error",
+    "jsx-a11y/no-static-element-interactions": 0,
+    "react/jsx-closing-tag-location": 0,
+    "react/jsx-first-prop-new-line": [2, "multiline"],
+    "react/require-extension": 0,
+    "react/sort-comp": 0,
+    "react/forbid-prop-types": 0,
+    "react/self-closing-comp": 1,
+    "react/jsx-uses-vars": 2,
+    "react/destructuring-assignment": [0],
+    "react/require-default-props": [0],
+    "jsx-a11y/click-events-have-key-events": 0,
+    "import/no-named-as-default": 0,
+    "jsx-a11y/interactive-supports-focus": 0,
+    "newline-before-return": "warn",
+    "react/jsx-one-expression-per-line": 0,
+    "arrow-spacing": "warn",
+    "newline-after-var": "warn",
+    "import/no-extraneous-dependencies": 0,
+    "no-return-assign": ["off"],
+    "max-lines": ["error", 155],
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "no-use-before-define": 0,
+    "import/no-dynamic-require": 0,
+    "prefer-template": 2,
+    "require-yield": 0,
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-spaced-func": "off",
+    "inebreak-style": "off",
+    "curly": "off",
+    "no-fallthrough": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      },
+      "typescript": {
+        "project": "./tsconfig.json" // always try to resolve types under `<roo/>@types` directory even it doesn't contain any source code, like `@types/unist`
+      }
+    }
+  }
+}
