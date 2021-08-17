@@ -11,7 +11,7 @@ const Typography = () => {
 
   return (
     <ScrollView style={styleGuide.flexGrow_1} contentContainerStyle={styleGuide.p1}>
-      <AppButton title="Navigate" onPress={() => navigate('OtherScreen')} />
+      <AppButton title="Navigate" onPress={() => navigate('Components')} />
       <AppText style={styleGuide.h1}>H1</AppText>
       <AppText style={styleGuide.h2}>H2</AppText>
       <AppText style={styleGuide.h3}>H3</AppText>

@@ -7,15 +7,15 @@ import DateTimePicker, { DateTimePickerProps } from 'components/general/DateTime
 
 const now = new Date();
 
-interface IProps extends Omit<DateTimePickerProps, 'value' | 'onChange'> {
+type FormDatePickerProps = Omit<DateTimePickerProps, 'value' | 'onChange'> & {
   style?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
   wrapperStyle?: StyleProp<ViewStyle>;
   name: string;
   validate?: RegisterOptions;
-}
+};
 
-const FormDatePicker: React.FC<IProps> = ({
+const FormDatePicker: React.FC<FormDatePickerProps> = ({
   name,
   validate,
   wrapperStyle,

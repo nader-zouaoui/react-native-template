@@ -2,7 +2,7 @@ import { AppNavigationProp, AppRouteProp } from 'navigator/navigatorUtils';
 
 export type NavigatorParamList = {
   Typography: undefined;
-  OtherScreen: undefined;
+  Components: undefined;
 };
 
 export type NavigatorNavigationProp = AppNavigationProp<NavigatorParamList>;

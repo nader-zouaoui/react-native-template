@@ -1,3 +1,5 @@
 <resources>
     <color name="bootsplash_background">#FFFFFF</color>
+    <color name="mainTint">#ec407a</color>
+    <color name="white">#FFFFFF</color>
 </resources>

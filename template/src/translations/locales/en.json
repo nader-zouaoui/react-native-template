@@ -1,6 +1,7 @@
 {
   "misc": {
-    "or": "or"
+    "or": "or",
+    "select": "Select ..."
   },
   "toasts": {
     "defaultErrorMessage": "Something went wrong. Please try again later."

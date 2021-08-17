@@ -1682,6 +1682,14 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
 
+"@types/react-native-material-menu@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@types/react-native-material-menu/-/react-native-material-menu-1.0.5.tgz#5ff3657f2d7eb0f7b4bfb2f01a6951117d816734"
+  integrity sha512-i6i3QXxjj2azzY1x7lcK4JCIr0b1DLe/V4+MdoUGdUuWQ4ceHfbDUSkfmgaj+9kKdk68yhUKQIBTfUljC07BDg==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+
 "@types/react-native-vector-icons@6.4.8":
   version "6.4.8"
   resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.8.tgz#7dd9740f36a71e98c484b9ea12155940c85cedc2"
@@ -6588,6 +6596,11 @@ react-native-localize@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-native-localize/-/react-native-localize-2.1.1.tgz#da8f8776991d2b748708c408db05152602cefb38"
   integrity sha512-+uyz2/b0vyLq19fcb7r1qU1gqmzbp3aC6EMTvOVXwfBuiN+aJXR/fDdFOJJ8D7+bLccKeuS2zBDrazh+ZayX/g==
+
+react-native-material-menu@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-material-menu/-/react-native-material-menu-1.2.0.tgz#07fac14ccc6e1cd7b995016340efbfbddc6a7a58"
+  integrity sha512-1XbzJP8Uo09YjW0G8xuKcL2BD76BL/IYOq1KQuQ2yGMuwqBvfU/+AKvhvHWuckQK+bhcDSUgTWbH8qv1mRAX6w==
 
 react-native-modal@^12.1.0:
   version "12.1.0"

@@ -3,22 +3,20 @@ import { Controller, FieldError, useFormContext, RegisterOptions } from 'react-h
 import { get } from 'lodash';
 import { StyleProp, View, ViewStyle } from 'react-native';
 import FormErrorMessage from './FormErrorMessage';
-import { TextFieldProps } from 'components/general/TextField/textFieldTypes';
-import TextField from 'components/general/TextField';
+import Select, { SelectProps } from 'components/general/Select';
 
-type FormTextFieldProps = TextFieldProps & {
+type FormSelectProps<T> = Omit<SelectProps<T>, 'onChange' | 'value' | 'hasError'> & {
   name: string;
   validate?: RegisterOptions;
   wrapperStyle?: StyleProp<ViewStyle>;
 };
 
-const FormTextField: React.FC<FormTextFieldProps> = ({
+const FormSelect = <T extends unknown>({
   name,
   validate,
-
   wrapperStyle,
-  ...textFieldProps
-}) => {
+  ...selectProps
+}: FormSelectProps<T>) => {
   const {
     control,
     formState: { errors },
@@ -30,14 +28,8 @@ const FormTextField: React.FC<FormTextFieldProps> = ({
       <Controller
         rules={validate}
         control={control}
-        render={({ field: { onChange, value, onBlur } }) => (
-          <TextField
-            {...textFieldProps}
-            onBlur={onBlur}
-            onChangeText={onChange}
-            value={value}
-            hasError={!!fieldError}
-          />
+        render={({ field: { onChange, value } }) => (
+          <Select {...selectProps} onChange={onChange} value={value} hasError={!!fieldError} />
         )}
         name={name}
       />
@@ -46,4 +38,4 @@ const FormTextField: React.FC<FormTextFieldProps> = ({
   );
 };
 
-export default FormTextField;
+export default FormSelect;
