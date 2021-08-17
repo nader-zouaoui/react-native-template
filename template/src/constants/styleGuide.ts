@@ -119,4 +119,22 @@ export const styleGuide = StyleSheet.create({
   selfCenter: {
     alignSelf: 'center',
   },
+  right_0: {
+    right: 0,
+  },
+  left_0: {
+    left: 0,
+  },
+  top_0: {
+    top: 0,
+  },
+  bottom_0: {
+    bottom: 0,
+  },
+  w_100: {
+    width: '100%',
+  },
+  h_100: {
+    height: '100%',
+  },
 });

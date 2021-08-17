@@ -4,11 +4,11 @@ import React, { useEffect } from 'react';
 import OtherScreen from 'screens/OtherScreen';
 import Typography from 'screens/Typography';
 import { onAppBoot } from '_redux/actions/auth';
-import { AppParamList } from './types';
+import { NavigatorParamList } from './types';
 
-const Stack = createNativeStackNavigator<AppParamList>();
+const Stack = createNativeStackNavigator<NavigatorParamList>();
 
-export const AppNavigator = () => {
+export const Navigator = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {

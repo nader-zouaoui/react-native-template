@@ -1,16 +1,17 @@
 import { useNavigation } from '@react-navigation/native';
+import AppButton from 'components/general/AppButton';
 import AppText from 'components/general/AppText';
 import { styleGuide } from 'constants/styleGuide';
-import { AppNavigationProp } from 'navigator/types';
+import { NavigatorNavigationProp } from 'navigator/Navigator/types';
 import React from 'react';
-import { Button, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 
 const Typography = () => {
-  const { navigate } = useNavigation<AppNavigationProp>();
+  const { navigate } = useNavigation<NavigatorNavigationProp>();
 
   return (
     <ScrollView style={styleGuide.flexGrow_1} contentContainerStyle={styleGuide.p1}>
-      <Button title="Navigate" onPress={() => navigate('OtherScreen')} />
+      <AppButton title="Navigate" onPress={() => navigate('OtherScreen')} />
       <AppText style={styleGuide.h1}>H1</AppText>
       <AppText style={styleGuide.h2}>H2</AppText>
       <AppText style={styleGuide.h3}>H3</AppText>

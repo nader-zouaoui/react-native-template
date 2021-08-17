@@ -58,9 +58,9 @@ export const FONT_SIZE = {
 export const SHADOWS = {
   elevation: 5,
   shadowColor: COLORS.BLACK,
-  shadowOffset: { width: 2, height: 1 },
+  shadowOffset: { width: 2, height: 2 },
   shadowOpacity: 0.2,
-  shadowRadius: 3,
+  shadowRadius: 5,
 };
 
 export const BORDER_RADIUS = {
