@@ -2,12 +2,14 @@ import FormDatePicker from 'components/form/FormDatePicker';
 import FormSelect from 'components/form/FormSelect';
 import FormTextField from 'components/form/FormTextField';
 import AppButton from 'components/general/AppButton';
+import DeterminateProgressBar from 'components/general/ProgressBar/DeterminateProgressBar';
 import { styleGuide } from 'constants/styleGuide';
+import { VERTICAL_DEFAULT_SPACE } from 'constants/styleVariables';
 import Validators from 'helpers/formValidator';
 import { SelectorOption } from 'models/utils';
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
-import { View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 const SELECT_OPTIONS: SelectorOption<string>[] = [
   {
@@ -32,6 +34,16 @@ type FormValues = {
 };
 
 const Components = () => {
+  const [progress, setProgress] = useState(0.5);
+
+  useEffect(() => {
+    const progressInterval = setInterval(() => setProgress(Math.random()), 1500);
+
+    return () => {
+      clearInterval(progressInterval);
+    };
+  }, []);
+
   const formMethods = useForm<FormValues>({
     defaultValues: {
       input: 'Bonsoir',
@@ -49,6 +61,7 @@ const Components = () => {
   return (
     <FormProvider {...formMethods}>
       <View style={[styleGuide.flex_1, styleGuide.p1]}>
+        <DeterminateProgressBar progress={progress} style={styles.progressBar} />
         <FormTextField
           name="input"
           label="Input"
@@ -78,5 +91,11 @@ const Components = () => {
     </FormProvider>
   );
 };
+
+const styles = StyleSheet.create({
+  progressBar: {
+    marginVertical: VERTICAL_DEFAULT_SPACE,
+  },
+});
 
 export default Components;

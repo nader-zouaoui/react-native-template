@@ -35,7 +35,9 @@ const DateTimePickerComponent: React.FC<DateTimePickerComponentProps> = ({
       closeModal={() => setIsVisible(false)}
       style={[localStyles.container, { paddingBottom: bottom }]}
     >
-      {iOSTitle && <AppText style={[styleGuide.h6, localStyles.title]}>{iOSTitle}</AppText>}
+      {iOSTitle && (
+        <AppText style={[styleGuide.body_1, localStyles.title]}>{iOSTitle}</AppText>
+      )}
       <RNDateTimePicker
         {...datePickerProps}
         display="spinner"
@@ -54,7 +56,7 @@ const localStyles = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    marginVertical: DEFAULT_SPACE * 3,
+    marginTop: DEFAULT_SPACE,
   },
 });
 
