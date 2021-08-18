@@ -1,6 +1,9 @@
 # react-native-template
 
-Installed packages :
+
+## Content :
+
+### Installed packages :
 - Axios
 - Date fns
 - React hook form
@@ -9,11 +12,12 @@ Installed packages :
 - React native encrypted storage
 - React native material menu
 - React native modal
+- React Navigation
 - Reanimated 2
 - Vector Icons
 - Redux toolkit
 
-Components :
+### Components :
 - Form :
   - Text field
   - Select
@@ -25,8 +29,17 @@ Components :
 - Modal
 - Loader
 
-Custom hooks : 
+### Custom hooks : 
 - useAppDispatch
 - useAppSelector
 - useLoadingDispatch
 - useBounce
+
+
+### Miscellaneous :
+- iOS & Android App Icons
+- Splashscreen
+
+## Usage :
+
+`npx react-native init MyAppName --template https://github.com/eDonec/react-native-template`
