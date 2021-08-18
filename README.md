@@ -37,6 +37,7 @@
 
 
 ### Miscellaneous :
+- Hermes enabled
 - iOS & Android App Icons
 - Splashscreen
 
