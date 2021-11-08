@@ -1,6 +1,5 @@
 import { AnyAction, combineReducers, configureStore } from '@reduxjs/toolkit';
 import auth from '_redux/reducers/auth';
-
 import { signOut } from '_redux/actions/auth';
 
 const combinedReducer = combineReducers({
@@ -20,11 +19,11 @@ const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) => {
     if (__DEV__) {
-      import('redux-flipper').then((importResult) => {
-        const reduxFlipper = importResult.default;
+      const reduxFlipper = require('redux-flipper').default;
 
-        return getDefaultMiddleware().concat(reduxFlipper());
-      });
+      return getDefaultMiddleware().concat(reduxFlipper()) as ReturnType<
+        typeof getDefaultMiddleware
+      >;
     }
 
     return getDefaultMiddleware();

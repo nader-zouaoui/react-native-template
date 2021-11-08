@@ -14,7 +14,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import MaterialMenu, { MenuDivider, MenuItem } from 'react-native-material-menu';
-import translate from 'translations/translate';
+import { strings } from 'translations/translate';
 import Label from './Label';
 import { textFieldStyles } from './TextField/textFieldStyles';
 
@@ -74,7 +74,7 @@ const Select = <T extends unknown>({
         <AppText
           style={[styles.buttonText, !selectedValue && { color: colors.textSecondary }]}
         >
-          {selectedValue?.label ?? translate('misc.select')}
+          {selectedValue?.label ?? strings.misc.select}
         </AppText>
         <IonicIcon name="chevron-down" />
       </Pressable>

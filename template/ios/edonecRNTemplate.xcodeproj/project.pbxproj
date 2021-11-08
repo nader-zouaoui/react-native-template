@@ -22,6 +22,7 @@
 		54BE9962F625458595224EF3 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67EA75CAB62E491ABD4131B2 /* Poppins-LightItalic.ttf */; };
 		57757C497B824376A13C8A88 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88184E51314240419528A302 /* Lato-BoldItalic.ttf */; };
 		58C670F355AF95DB778784F7 /* libPods-edonecRNTemplate-edonecRNTemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 562BF821CE87BC1F33EC0D26 /* libPods-edonecRNTemplate-edonecRNTemplateTests.a */; };
+		61B8B89D2739991000F38913 /* BridgingHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B8B89C2739991000F38913 /* BridgingHeaders.swift */; };
 		61E503F026CA82AC0061EF8C /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61E503EF26CA82AC0061EF8C /* BootSplash.storyboard */; };
 		63DE9932D818496383B77774 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C481FF1A1E5846629CEC5E6C /* Lato-LightItalic.ttf */; };
 		66A2714674A84A2384B234E9 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F4466598D23468E8A15CC9D /* Lato-HairlineItalic.ttf */; };
@@ -85,6 +86,8 @@
 		562BF821CE87BC1F33EC0D26 /* libPods-edonecRNTemplate-edonecRNTemplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-edonecRNTemplate-edonecRNTemplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5703C16F6D6E46D98DC12B7A /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
 		5CAA716E680A49B79702F9D2 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BlackItalic.ttf"; path = "../assets/fonts/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		61B8B89B2739991000F38913 /* edonecRNTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "edonecRNTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
+		61B8B89C2739991000F38913 /* BridgingHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgingHeaders.swift; sourceTree = "<group>"; };
 		61E503EF26CA82AC0061EF8C /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = edonecRNTemplate/BootSplash.storyboard; sourceTree = "<group>"; };
 		67EA75CAB62E491ABD4131B2 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-LightItalic.ttf"; path = "../assets/fonts/Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
 		693B818B570F4A0C9DD2E583 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				61E503EF26CA82AC0061EF8C /* BootSplash.storyboard */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				61B8B89C2739991000F38913 /* BridgingHeaders.swift */,
+				61B8B89B2739991000F38913 /* edonecRNTemplate-Bridging-Header.h */,
 			);
 			name = edonecRNTemplate;
 			sourceTree = "<group>";
@@ -331,7 +336,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
@@ -564,6 +569,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				61B8B89D2739991000F38913 /* BridgingHeaders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +588,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B82476BD10F246EACC781DF1 /* Pods-edonecRNTemplate-edonecRNTemplateTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -609,6 +616,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13BD6B8F3A1445998261CBDE /* Pods-edonecRNTemplate-edonecRNTemplateTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = edonecRNTemplateTests/Info.plist;
@@ -649,6 +657,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.edonecRNTemplate;
 				PRODUCT_NAME = edonecRNTemplate;
+				SWIFT_OBJC_BRIDGING_HEADER = "edonecRNTemplate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -674,6 +683,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.edonecRNTemplate;
 				PRODUCT_NAME = edonecRNTemplate;
+				SWIFT_OBJC_BRIDGING_HEADER = "edonecRNTemplate-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

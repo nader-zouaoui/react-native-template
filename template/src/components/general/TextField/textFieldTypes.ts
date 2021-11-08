@@ -23,7 +23,6 @@ export type TextFieldProps = TextInputProps & {
   isEmail?: boolean;
   hasError?: boolean;
   nextField?: React.RefObject<TextInput>;
-  handleFocus?: (ref: React.RefObject<TextInput>) => void;
   containerStyle?: StyleProp<ViewStyle>;
   labelStyle?: StyleProp<TextStyle>;
   iconRight?: RenderIconType;

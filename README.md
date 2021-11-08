@@ -1,9 +1,9 @@
 # react-native-template
 
-
 ## Content :
 
 ### Installed packages :
+
 - Axios
 - Date fns
 - React hook form
@@ -13,11 +13,13 @@
 - React native material menu
 - React native modal
 - React Navigation
+- React Native Localize
 - Reanimated 2
 - Vector Icons
 - Redux toolkit
 
 ### Components :
+
 - Form :
   - Text field
   - Select
@@ -28,18 +30,23 @@
 - Label
 - Modal
 - Loader
+- AppBlur (BlurView on iOS and Dark overlay on Android)
 
-### Custom hooks : 
+### Custom hooks :
+
 - useAppDispatch
 - useAppSelector
 - useLoadingDispatch
 - useBounce
 
-
 ### Miscellaneous :
+
 - Hermes enabled
 - iOS & Android App Icons
 - Splashscreen
+- Flipper debugger setup
+
+**React Native version : 0.66.2**
 
 ## Usage :
 

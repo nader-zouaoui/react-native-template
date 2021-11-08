@@ -10,7 +10,7 @@ const Typography = () => {
   const { navigate } = useNavigation<NavigatorNavigationProp>();
 
   return (
-    <ScrollView style={styleGuide.flexGrow_1} contentContainerStyle={styleGuide.p1}>
+    <ScrollView style={styleGuide.flexGrow_1} contentContainerStyle={styleGuide.p_1}>
       <AppButton title="Navigate" onPress={() => navigate('Components')} />
       <AppText style={styleGuide.h1}>H1</AppText>
       <AppText style={styleGuide.h2}>H2</AppText>

@@ -60,7 +60,7 @@ const Components = () => {
 
   return (
     <FormProvider {...formMethods}>
-      <View style={[styleGuide.flex_1, styleGuide.p1]}>
+      <View style={[styleGuide.flex_1, styleGuide.p_1]}>
         <DeterminateProgressBar progress={progress} style={styles.progressBar} />
         <FormTextField
           name="input"

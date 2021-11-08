@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
-import { TextInput, Pressable } from 'react-native';
+import React, { useState, useCallback, useMemo } from 'react';
+import { Pressable } from 'react-native';
 import MaterialIcon from 'components/icons/MaterialIcon';
 import { styleGuide } from 'constants/styleGuide';
 import { getIconContent } from './textFieldUtils';
@@ -7,31 +7,19 @@ import { textFieldStyles } from './textFieldStyles';
 import { TextFieldProps } from './textFieldTypes';
 
 export const useTextField = ({
-  handleFocus,
   isPassword,
   iconRight,
   iconLeft,
   nextField,
-}: Pick<
-  TextFieldProps,
-  'handleFocus' | 'isPassword' | 'iconRight' | 'iconLeft' | 'nextField'
->) => {
+}: Pick<TextFieldProps, 'isPassword' | 'iconRight' | 'iconLeft' | 'nextField'>) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const togglePasswordVisibility = useCallback(() => {
     setPasswordVisible((prev) => !prev);
   }, []);
-  const fieldRef = useRef<TextInput>(null);
 
-  useEffect(() => {
-    if (handleFocus) {
-      handleFocus(fieldRef);
-    }
-  }, [fieldRef, handleFocus]);
-  const handleFocusNextField = () => {
-    if (nextField && nextField.current) {
-      nextField.current.focus();
-    }
-  };
+  const handleFocusNextField = useCallback(() => {
+    nextField?.current?.focus();
+  }, [nextField]);
 
   const hasRightContent = useMemo(() => iconRight || isPassword, [iconRight, isPassword]);
 
@@ -76,6 +64,5 @@ export const useTextField = ({
     renderRight,
     handleFocusNextField,
     passwordVisible,
-    fieldRef,
   };
 };

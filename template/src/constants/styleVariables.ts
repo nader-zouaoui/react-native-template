@@ -1,15 +1,11 @@
 import { TextStyle } from 'react-native';
-import { scale, verticalScale } from 'react-native-size-matters';
+import { scale, verticalScale } from 'react-native-size-matters/extend';
 
 type IFontWeights = 'extraLight' | 'light' | 'regular' | 'semiBold' | 'bold' | 'black';
 
 export const COLORS = {
   PRIMARY: '#ec407a',
-  PRIMARY_DARK: '#b4004e',
-  PRIMARY_LIGHT: '#ff77a9',
   SECONDARY: '#303f9f',
-  SECONDARY_DARK: '#001970',
-  SECONDARY_LIGHT: '#666ad1',
   SUCCESS: '#73BB9B',
   INFO: '#1883BC',
   WARNING: '#ffba00',
