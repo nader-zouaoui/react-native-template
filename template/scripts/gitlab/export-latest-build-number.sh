@@ -13,7 +13,6 @@ NUMERIC_TAG=${LATEST_TAG//[^0-9]/}
 # # if tag not found, the default build number will be 1
 CI_LATEST_BUILD_NUMBER=${NUMERIC_TAG:-1}
 
-echo "Got version number ${CI_LATEST_BUILD_NUMBER}"
 # export for use in CI stage 
 export CI_LATEST_BUILD_NUMBER
 
