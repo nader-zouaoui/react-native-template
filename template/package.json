@@ -10,7 +10,14 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prettify": "prettier --write ./src ",
     "reverse": "adb reverse tcp:8081 tcp:8081",
-    "postinstall": "patch-package && husky install"
+    "postinstall": "patch-package && husky install",
+    "android-package": "cd android && ./gradlew assembleRelease",
+    "generate-gradle-properties": "bash scripts/generate-gradle-properties.sh > android/gradle.properties",
+    "generate-dotenv": "bash scripts/generate-dotenv.sh > .env",
+    "bump-version:patch": "yarn version --patch --no-git-tag-version",
+    "bump-version:minor": "yarn version --minor --no-git-tag-version",
+    "bump-version:major": "yarn version --major --no-git-tag-version",
+    "package-version": "echo $npm_package_version"
   },
   "dependencies": {
     "@react-native-community/blur": "^3.6.0",

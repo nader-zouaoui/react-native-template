@@ -1,0 +1,34 @@
+stages:
+  - versioning
+  - build
+
+versioning:
+  only:
+    - master
+  stage: versioning
+  image: node:12
+  script:
+    - source ./scripts/gitlab/setup-git-rw.sh
+    - source ./scripts/gitlab/export-latest-build-number.sh
+    - export CI_LATEST_BUILD_NUMBER=$(($CI_LATEST_BUILD_NUMBER+1))
+    - git tag $CI_LATEST_BUILD_NUMBER
+    - git push origin $CI_LATEST_BUILD_NUMBER
+
+build:android:package:
+  only:
+    - master
+  stage: build
+  image: reactnativecommunity/react-native-android
+  script:
+    - echo fs.inotify.max_user_watches=524288 | tee -a /etc/sysctl.conf && sysctl -p
+    - yarn
+    - base64 -d $ANDROID_KEYSTORE > android/app/my-upload-key.keystore
+    - yarn generate-dotenv
+    - source ./scripts/set-version-in-dotenv.sh
+    - bash ./scripts/update-android-version.sh
+    - yarn generate-gradle-properties
+    - yarn android-package --no-daemon
+    - cp ./android/app/build/outputs/apk/release/app-release.apk app-release.apk
+  artifacts:
+    paths:
+      - app-release.apk

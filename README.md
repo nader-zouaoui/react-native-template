@@ -2,6 +2,8 @@
 
 ## Content :
 
+React Native template with most of the essential packages installed and set up + **Gitlab CI/CD scripts**
+
 ### Installed packages :
 
 - Axios
@@ -45,6 +47,7 @@
 - iOS & Android App Icons
 - Splashscreen
 - Flipper debugger setup
+- Gitlab CI/CD scripts
 
 **React Native version : 0.66.2**
 
