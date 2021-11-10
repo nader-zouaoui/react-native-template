@@ -1,3 +1,4 @@
+import { BUILD_NUMBER, VERSION } from '@env';
 import { useNavigation } from '@react-navigation/native';
 import AppButton from 'components/general/AppButton';
 import AppText from 'components/general/AppText';
@@ -12,6 +13,8 @@ const Typography = () => {
   return (
     <ScrollView style={styleGuide.flexGrow_1} contentContainerStyle={styleGuide.p_1}>
       <AppButton title="Navigate" onPress={() => navigate('Components')} />
+      <AppText style={styleGuide.overline}>App Version : {VERSION}</AppText>
+      <AppText style={styleGuide.overline}>Build N° : {BUILD_NUMBER}</AppText>
       <AppText style={styleGuide.h1}>H1</AppText>
       <AppText style={styleGuide.h2}>H2</AppText>
       <AppText style={styleGuide.h3}>H3</AppText>
